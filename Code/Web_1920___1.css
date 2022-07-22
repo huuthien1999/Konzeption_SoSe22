@@ -1,3 +1,10 @@
+@font-face {
+	font-family: LEMON MILK;
+	src: url('./assets/fonts/LEMONMILK-Medium.otf')
+	format("opentype");
+	}
+
+
 .mediaViewInfo {
 	--web-view-name: Web 1920 – 1;
 	--web-view-id: Web_1920__1;
@@ -20,22 +27,9 @@ html,
 body{
 	height: 100%;
 }
-/* #Web_1920__1 {
-	width: 100%;
-	/* height: 5836px; */
-	/* height: 100%;
-	background-color: rgba(255,255,255,1); */
-	/* overflow: hidden; */
-	/* --web-view-name: Web 1920 – 1;
-	--web-view-id: Web_1920__1;
-	--web-show-by-media-query: true;
-	--web-enable-deep-linking: true; */
-/* } */
 
 #Header {
 	height: 100vh;
-	/* left: 5%; */
-	/* overflow: visible; */
 }
  
 
@@ -52,14 +46,7 @@ body{
 	top: 1092px;
 }
 
-/* #n_20709_HFU_Micorpage-Bild_001 {
-	position: absolute;
-	width: 413px;
-	height: 652px;
-	left: 0px;
-	top: 0px;
-	overflow: visible;
-} */
+
 
 #n_20709_HFU_Micorpage-Bild_001 {
     position: absolute;
@@ -69,18 +56,9 @@ body{
     left: 5%;
 }
 
-#Video {
-	/* fill: rgba(255,255,255,1);
-	stroke: rgba(112,112,112,1);
-	stroke-width: 1px;
-	stroke-linejoin: miter;
-	stroke-linecap: butt;
-	stroke-miterlimit: 4;
-	shape-rendering: auto; */
-}
+
 .Video {
     position: absolute;
-    /* overflow: visible; */
     width: 53vw;
     height: 62vh;
     right: 5%;
@@ -89,15 +67,13 @@ body{
 #SHEIN {
 	pointer-events: none;
 	position: relative;
-	top: 55%;
+	top: 57%;
     text-align: center;
-    font-family: "LEMON MILK";
+    font-family: LEMON MILK;
     font-style: normal;
     font-weight: normal;
     font-size: 21vw;
     color: rgb(28, 25, 25);
-	
-	
 }
 
 
@@ -105,36 +81,16 @@ body{
 	background-color: #1C1919;
     position: relative;
     width: 100%;
-    height: 200vw;
+    height: 525vw;
 }
 
 #HEILIG {
-    /* position: relative;
-    top: -12.7%; */
     text-align: center;
     font-family: LEMON MILK;
     font-style: normal;
     font-weight: normal;
     font-size: 21vw;
     color: rgba(255,255,255,1);
-}
-#Linie_1 {
-	fill: transparent;
-	stroke: rgba(255,255,255,1);
-	stroke-width: 4px;
-	stroke-linejoin: miter;
-	stroke-linecap: butt;
-	stroke-miterlimit: 4;
-	shape-rendering: auto;
-}
-.Linie_1 {
-	overflow: visible;
-	/* position: absolute; */
-	width: 90%;
-	height: 4px;
-	left: 110.5px;
-	top: 1491.5px;
-	transform: matrix(1,0,0,1,0,0);
 }
 
 #FRAGESTELLUNG {
@@ -148,8 +104,9 @@ body{
 
 #PROJEKTBESCHREIBUNG, #ZIEL{
 	margin-top: 5vw;
-    margin-left: 5vw;
-    width: 45%;
+    margin-left: 2vw;
+    width: 42%;
+	line-height: 1.5vw;
 }
 
 #PROJEKTBESCHREIBUNG {
@@ -160,27 +117,79 @@ body{
     font-size: 2.2vw;
     color: rgba(255,255,255,1);
 }
-#n_20709_HFU_Micorpage-Bild_391 {
-	/* position: absolute; */
-	/* width: 853px;
-	height: 468px;
-	left: 787px;
-	top: 544px; */
-	overflow: visible;
+
+
+.divLinie_1{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin-bottom: 4.6875vw	;
 }
-#AUFBAU {
-	/* left: 1250px;
-	top: 453px; */
-	position: absolute;
+
+.divLinie_2{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin-top: 4.6875vw	;
+	margin-bottom: 4.6875vw	;
+}
+
+
+#Linie_1 {
+	fill: transparent;
+	stroke: rgba(255,255,255,1);
+	stroke-width: 0.2083vw;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.Linie_1 {
 	overflow: visible;
-	width: 467px;
-	white-space: nowrap;
-	text-align: center;
-	font-family: LEMON MILK;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 4vw;
-	color: rgba(255,255,255,1);
+	width: 90vw;
+	height: 0.2083vw;
+	transform: matrix(1,0,0,1,0,0);
+}
+
+
+.aufbauBilder {
+	position: absolute;
+	width: 44vw;
+	height: 33vw;
+	right: 5vw;
+    top: 56vw;
+}
+
+.img-hover, .img-main {
+	width: 44vw;
+	height: 33vw;
+}
+
+.aufbauBilder img.img-hover {
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	/* object-fit: contain; */
+	opacity: 0;
+	transition: opacity .2s;
+}
+
+
+.aufbauBilder:hover img.img-hover {
+	opacity: 1;
+}
+
+#AUFBAU {
+    position: absolute;
+	top: 53vw;
+	right: 1vw;
+    overflow: visible;
+    font-family: LEMON MILK;
+    font-size: 4vw;
+    color: rgba(255,255,255,1);
+	
 }
 #ZIEL {
 	text-align: left;
@@ -190,145 +199,103 @@ body{
 	font-size: 2.2vw;
 	color: rgba(255,255,255,1);
 }
-#Linie_2 {
-	fill: transparent;
-	stroke: rgba(255,255,255,1);
-	stroke-width: 4px;
-	stroke-linejoin: miter;
-	stroke-linecap: butt;
-	stroke-miterlimit: 4;
-	shape-rendering: auto;
-}
-.Linie_2 {
-	overflow: visible;
-	position: absolute;
-	width: 1713px;
-	height: 4px;
-	left: 143px;
-	top: 2973.5px;
-	transform: matrix(1,0,0,1,0,0);
-}
-#Projezierte_Prints {
-	position: absolute;
-	width: 1362px;
-	height: 754px;
-	left: 279px;
-	top: 3071px;
+
+#Prints {
 	overflow: visible;
 }
-#Gruppe_1 {
-	position: absolute;
-	width: 1362px;
-	height: 424px;
-	left: 0px;
-	top: 144px;
-	overflow: visible;
-}
-#Sequenz_02 {
-	position: absolute;
-	width: 276px;
-	height: 417px;
-	left: 0px;
-	top: 0px;
-	overflow: visible;
-}
-#Rechteck_7 {
-	fill: rgba(255,255,255,1);
-	stroke: rgba(112,112,112,1);
-	stroke-width: 1px;
-	stroke-linejoin: miter;
-	stroke-linecap: butt;
-	stroke-miterlimit: 4;
-	shape-rendering: auto;
-}
-.Rechteck_7 {
-	position: absolute;
-	overflow: visible;
-	width: 276px;
-	height: 424px;
-	left: 1086px;
-	top: 0px;
-}
-#Rechteck_5 {
-	fill: rgba(255,255,255,1);
-	stroke: rgba(112,112,112,1);
-	stroke-width: 1px;
-	stroke-linejoin: miter;
-	stroke-linecap: butt;
-	stroke-miterlimit: 4;
-	shape-rendering: auto;
-}
-.Rechteck_5 {
-	position: absolute;
-	overflow: visible;
-	width: 276px;
-	height: 424px;
-	left: 362px;
-	top: 0px;
-}
-#Rechteck_6 {
-	fill: rgba(255,255,255,1);
-	stroke: rgba(112,112,112,1);
-	stroke-width: 1px;
-	stroke-linejoin: miter;
-	stroke-linecap: butt;
-	stroke-miterlimit: 4;
-	shape-rendering: auto;
-}
-.Rechteck_6 {
-	position: absolute;
-	overflow: visible;
-	width: 276px;
-	height: 424px;
-	left: 724px;
-	top: 0px;
-}
-#Projizierte_Prints {
-	left: 249px;
-	top: 0px;
-	position: absolute;
-	overflow: visible;
-	width: 865px;
+
+#PP_ueberschrift {
 	white-space: nowrap;
 	text-align: center;
 	font-family: LEMON MILK;
 	font-style: normal;
 	font-weight: normal;
-	font-size: 78px;
+	font-size: 4vw;
 	color: rgba(255,255,255,1);
 }
-#Die_Prints_sind_angelehnt_an_d {
-	left: 353px;
-	top: 639px;
-	position: absolute;
-	overflow: visible;
-	width: 657px;
-	white-space: nowrap;
+#PP_Text {
+	line-height: 1.8vw;
 	text-align: center;
 	font-family: LEMON MILK;
 	font-style: normal;
 	font-weight: lighter;
-	font-size: 18px;
+	font-size: 1vw;
 	color: rgba(255,255,255,1);
 }
-#Linie_3 {
-	fill: transparent;
-	stroke: rgba(255,255,255,1);
-	stroke-width: 4px;
-	stroke-linejoin: miter;
-	stroke-linecap: butt;
-	stroke-miterlimit: 4;
-	shape-rendering: auto;
+
+.flex-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	position: relative;
 }
-.Linie_3 {
-	overflow: visible;
+
+.flex-container video {
+	width:  16.666666666666668vw;
+	height: 12.5vw;
+	margin: 1vw;
+}
+
+.print-1-main, .print-1-hover{
+	width: 23.28125vw;
+	height: 32.91666vw;
+}
+
+.print-1 {
+	position: relative;
+	margin: 0.5vw;
+}
+
+
+.print-1 img.print-1-hover {
 	position: absolute;
-	width: 1713px;
-	height: 4px;
-	left: 143px;
-	top: 3899.5px;
-	transform: matrix(1,0,0,1,0,0);
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	/* object-fit: contain; */
+	opacity: 0;
+	transition: opacity .2s;
 }
+
+
+.print-1:hover img.print-1-hover {
+	opacity: 1;
+}
+
+
+#gallery {
+	margin: 1vw;
+	line-height:0;
+    -moz-column-count:    3;
+    -webkit-column-count: 3;
+    column-count:         3;
+	column-gap:0.75vw;
+ }
+
+ #gallery2 {
+	margin: 1vw;
+	line-height:0;
+    -moz-column-count:    2;
+    -webkit-column-count: 2;
+    column-count:         2;
+	column-gap:0.75vw;
+ }
+
+ #gallery img {
+	width: 100% !important;
+	height: auto !important;
+	margin-bottom:0.75vw; /* to match column gap */
+ }
+
+ #gallery2 img {
+	width: 100% !important;
+	height: auto !important;
+	margin-bottom:0.75vw; /* to match column gap */
+ }
+
+
+
 #GALERIE {
 	position: absolute;
 	width: 1573.5px;
@@ -337,106 +304,14 @@ body{
 	top: 3954.5px;
 	overflow: visible;
 }
-#Rechteck_3 {
-	fill: rgba(255,255,255,1);
-	stroke: rgba(112,112,112,1);
-	stroke-width: 1px;
-	stroke-linejoin: miter;
-	stroke-linecap: butt;
-	stroke-miterlimit: 4;
-	shape-rendering: auto;
-}
-.Rechteck_3 {
-	position: absolute;
-	overflow: visible;
-	width: 1026px;
-	height: 596px;
-	left: 547.5px;
-	top: 239.5px;
-}
-#GAlerie {
-	opacity: 0.36;
-	left: 0px;
-	top: 0px;
-	position: absolute;
-	overflow: visible;
-	width: 1136px;
-	white-space: nowrap;
-	line-height: 273px;
-	margin-top: -4px;
-	text-align: left;
+
+#tools_text{
+
+	line-height: 1.8vw;
+	text-align: center;
 	font-family: LEMON MILK;
 	font-style: normal;
-	font-weight: normal;
-	font-size: 265px;
+	font-weight: lighter;
+	font-size: 1vw;
 	color: rgba(255,255,255,1);
-}
-#Tools {
-	position: absolute;
-	width: 1700.5px;
-	height: 622px;
-	left: 118.5px;
-	top: 5106px;
-	overflow: visible;
-}
-#Rechteck_8 {
-	fill: rgba(255,255,255,1);
-	stroke: rgba(112,112,112,1);
-	stroke-width: 1px;
-	stroke-linejoin: miter;
-	stroke-linecap: butt;
-	stroke-miterlimit: 4;
-	shape-rendering: auto;
-}
-.Rechteck_8 {
-	position: absolute;
-	overflow: visible;
-	width: 701px;
-	height: 452px;
-	left: 140.5px;
-	top: 170px;
-}
-#TOOLS {
-	left: 0px;
-	top: 0px;
-	position: absolute;
-	overflow: visible;
-	width: 698px;
-	white-space: nowrap;
-	line-height: 205px;
-	margin-top: -3px;
-	text-align: left;
-	font-family: LEMON MILK;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 199px;
-	color: rgba(0,0,0,1);
-}
-#Animationen__assets__prints__A {
-	left: 867.5px;
-	top: 101px;
-	position: absolute;
-	overflow: visible;
-	width: 834px;
-	height: 227px;
-	text-align: center;
-	font-family: LEMON MILK;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 42px;
-	color: rgba(0,0,0,1);
-}
-#Projetion_mapping__-Viewsonic_ {
-	left: 867.5px;
-	top: 328px;
-	position: absolute;
-	overflow: visible;
-	width: 834px;
-	height: 181px;
-	text-align: center;
-	font-family: LEMON MILK;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 42px;
-	color: rgba(0,0,0,1);
 }
